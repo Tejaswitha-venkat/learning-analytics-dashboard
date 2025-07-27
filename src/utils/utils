@@ -1,0 +1,8 @@
+class DataProcessor:
+    def preprocess_student_data(self, raw_data):
+        # Data preprocessing logic
+        pass
+    
+    def calculate_metrics(self, data):
+        # Metrics calculation logic
+        pass

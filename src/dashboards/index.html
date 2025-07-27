@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Analytics Dashboard</title>
+    <link rel="stylesheet" href="styles/dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <h1>Student Performance Dashboard</h1>
+            <div class="student-info">
+                <span id="student-name">Student: John Doe</span>
+                <span id="grade-level">Grade Level: 10</span>
+            </div>
+        </header>
+
+        <div class="dashboard-grid">
+            <div class="dashboard-card risk-score-card">
+                <h3>Risk Assessment</h3>
+                <div class="risk-indicator">
+                    <div class="risk-score" id="risk-score">
+                        <span class="score-value">75%</span>
+                        <p class="risk-level">Risk Level: High</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-card performance-card">
+                <h3>Performance Metrics</h3>
+                <div class="metrics-grid">
+                    <div class="metric">
+                        <h4>Average Score</h4>
+                        <span id="average-score">85%</span>
+                    </div>
+                    <div class="metric">
+                        <h4>Attendance Rate</h4>
+                        <span id="attendance-rate">92%</span>
+                    </div>
+                    <div class="metric">
+                        <h4>Assignments Completed</h4>
+                        <span id="completion-rate">88%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-card trends-card">
+                <h3>Performance Trends</h3>
+                <canvas id="performance-chart"></canvas>
+            </div>
+
+            <div class="dashboard-card attendance-card">
+                <h3>Attendance Overview</h3>
+                <canvas id="attendance-chart"></canvas>
+            </div>
+
+            <div class="dashboard-card recommendations-card">
+                <h3>Recommended Actions</h3>
+                <ul id="recommendations-list">
+                    <li class="recommendation-item">Schedule additional support sessions</li>
+                    <li class="recommendation-item">Review fundamental concepts</li>
+                    <li class="recommendation-item">Increase participation in class discussions</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/dashboard.js"></script>
+</body>
+</html>

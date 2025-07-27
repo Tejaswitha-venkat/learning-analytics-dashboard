@@ -1,0 +1,21 @@
+class LearningAnalyticsService:
+    def __init__(self):
+        self.prediction_service = StudentPredictionService()
+    
+    def analyze_student_performance(self, student_id):
+        student_data = self._get_student_data(student_id)
+        analysis = {
+            'risk_score': self.prediction_service.predict_risk_score(student_data),
+            'performance_trends': self._calculate_trends(student_data),
+            'engagement_metrics': self._analyze_engagement(student_data),
+            'recommendations': []
+        }
+        return analysis
+    
+    def generate_class_insights(self, class_id):
+        class_data = self._get_class_data(class_id)
+        return {
+            'average_performance': self._calculate_class_average(class_data),
+            'at_risk_students': self._identify_at_risk_students(class_data),
+            'intervention_suggestions': self._generate_interventions(class_data)
+        }
